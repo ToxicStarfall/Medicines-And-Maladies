@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "mymod",
+  "version": "${version}",
+  "name": "MyMod",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/mymod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "toxicstarfall.mymod.client.MyModClient"
+    ],
+    "main": [
+      "toxicstarfall.mymod.MyMod"
+    ]
+  },
+  "mixins": [
+    "mymod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
