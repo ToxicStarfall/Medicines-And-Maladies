@@ -4,5 +4,13 @@
 	"item.mymod.shroom": "Shroom",
 	"item.mymod.some_item": "Some Item",
 
-	"effect.mymod.sedated": "Sedated"
+	"effect.mymod.bleeeding": "Bleeding",
+	"effect.mymod.growth": "Growth",
+	"effect.mymod.hallucination": "Hallucination",
+	"effect.mymod.rebirth": "Rebirth",
+	"effect.mymod.sedated": "Sedated",
+
+	"death.attack.bleeding": "%s bled to death",
+	"death.attack.bleeding.item": "%s was bled to death by %s using %s",
+	"death.attack.bleeding.player": "%s bled to death whilst trying to escape %s"
 }

@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import net.fabricmc.api.ModInitializer;
 import toxicstarfall.mymod.registry.ModBlocks;
 import toxicstarfall.mymod.registry.ModEffects;
+import toxicstarfall.mymod.registry.ModEntities;
 import toxicstarfall.mymod.registry.ModItems;
 
 public class MyMod implements ModInitializer {
@@ -24,5 +25,6 @@ public class MyMod implements ModInitializer {
 		ModBlocks.initialize();
 		ModItems.initialize();
 		ModEffects.initialize();
+		ModEntities.initialize();
 	}
 }

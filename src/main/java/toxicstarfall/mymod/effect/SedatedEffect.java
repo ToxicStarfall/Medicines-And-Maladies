@@ -1,5 +1,7 @@
 package toxicstarfall.mymod.effect;
 
+import java.io.ObjectInputFilter.Status;
+
 import com.google.common.collect.Multimap;
 
 import net.minecraft.entity.LivingEntity;
@@ -32,6 +34,8 @@ public class SedatedEffect extends StatusEffect {
 	public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
 		// MobEntity
 		// StatusEffectInstance
+		// StatusEffects.OOZING
+		// OozingStatusEffect
 
 		// if (entity instanceof PlayerEntity) {
 		// 	((PlayerEntity) entity).addExperience(1 << amplifier); // Higher amplifier gives you experience faster
