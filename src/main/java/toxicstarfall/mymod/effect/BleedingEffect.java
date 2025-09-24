@@ -1,9 +1,14 @@
 package toxicstarfall.mymod.effect;
 
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.server.world.ServerWorld;
+
+import toxicstarfall.mymod.MyMod;
+import toxicstarfall.mymod.registry.ModEffects;
 
 
 public class BleedingEffect extends StatusEffect {
@@ -22,10 +27,19 @@ public class BleedingEffect extends StatusEffect {
 
 	// Called when the effect is applied.
 	public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
-		// MyMod.LOGGER.info("Growth effect applied this tick");
+		// MyMod.LOGGER.info("Bleeding effect applied this tick");
 		
-		entity.damage(world, null, amplifier);
-		
+		DamageSource damageSource = new DamageSource(
+			world.getRegistryManager()
+					.getOrThrow(RegistryKeys.DAMAGE_TYPE)
+					.getEntry(ModEffects.BLEEDING_DAMAGE.getValue()).get()
+		);
+
+		entity.damage(
+			world,
+			damageSource,
+			amplifier
+		);
 		return super.applyUpdateEffect(world, entity, amplifier);
 	}
 }

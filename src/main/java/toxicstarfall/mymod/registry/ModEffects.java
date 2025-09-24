@@ -1,8 +1,11 @@
 package toxicstarfall.mymod.registry;
 
+import net.minecraft.entity.damage.DamageType;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
@@ -30,6 +33,8 @@ public class ModEffects {
 			Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(MyMod.MOD_ID, "sedated"), new SedatedEffect());
 
 
-	public static void initialize() {}
+	public static final RegistryKey<DamageType> BLEEDING_DAMAGE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(MyMod.MOD_ID, "bleeding"));
+
 	
+	public static void initialize() {}
 }

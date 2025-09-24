@@ -37,10 +37,11 @@ public class GrowthEffect extends StatusEffect {
 		
 		if (entity instanceof PlayerEntity) {
 			// if (entity.getFoodData().getSaturationLevel() > 0.0) {
-			// 	return true;
-			// }
+				// 	return true;
+				// }
 			if (entity.getHealth() < entity.getMaxHealth()) {
 				entity.heal(1.0F);
+				MyMod.LOGGER.info("Growth heals for 1.0");
 			}
 		}
 		

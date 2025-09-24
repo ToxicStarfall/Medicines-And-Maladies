@@ -3,17 +3,34 @@ package toxicstarfall.mymod.registry;
 import java.util.function.Function;
 
 import com.jcraft.jorbis.Block;
+import com.mojang.brigadier.context.CommandContext;
 
+import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
+import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.GrassBlock;
+import net.minecraft.command.CommandSource;
+import net.minecraft.data.loottable.LootTableData;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTables;
+import net.minecraft.loot.context.LootContextTypes;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.Potions;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.server.command.CommandManager;
 import net.minecraft.util.Identifier;
 
 import toxicstarfall.mymod.MyMod;
+import toxicstarfall.mymod.item.BandageItem;
 import toxicstarfall.mymod.item.ConsumableItem;
 import toxicstarfall.mymod.item.FoodValues;
 import toxicstarfall.mymod.item.FoodValues.ConsumableValues;
@@ -49,7 +66,7 @@ public class ModItems {
 	// );
 
 	public static final Item BANDAGE = register("bandage",
-			ConsumableItem::new, new Item.Settings().food(FoodValues.BANDAGE, FoodValues.ConsumableValues.BANDAGE));
+			BandageItem::new, new Item.Settings().food(FoodValues.BANDAGE, FoodValues.ConsumableValues.BANDAGE));
 	public static final Item POPPY_SEED = register("poppy_seed",
 			ConsumableItem::new, new Item.Settings().food(FoodValues.POPPY_SEED, FoodValues.ConsumableValues.POPPY_SEED));
 	public static final Item POPPY_CRACKER = register("poppy_cracker",
@@ -67,7 +84,61 @@ public class ModItems {
 
 	// public static final Item NECROTIC_ARROW = register("shroom", Item::new, new Item.Settings());
 
-	
-	public static void initialize() {}
+	public static final Potion BLEEDING_POTION = Registry.register(
+			Registries.POTION,
+			Identifier.of(MyMod.MOD_ID, "bleeding"),
+			new Potion("bleeding",
+				new StatusEffectInstance(ModEffects.BLEEDING, 1200, 1)
+			));
+	public static final Potion HALLUCINATION_POTION = Registry.register(
+			Registries.POTION,
+			Identifier.of(MyMod.MOD_ID, "hallucination"),
+			new Potion("hallucination",
+				new StatusEffectInstance(ModEffects.HALLUCINATION, 1200, 1)
+			));
+	public static final Potion REBIRTH_POTION = Registry.register(
+			Registries.POTION,
+			Identifier.of(MyMod.MOD_ID, "rebirth"),
+			new Potion("rebirth",
+				new StatusEffectInstance(ModEffects.REBIRTH, 1200, 1)
+			));
+
+
+	public static void initialize() {
+		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
+			builder.registerPotionRecipe(
+					Potions.WATER,
+					Items.IRON_NUGGET,
+					Registries.POTION.getEntry(BLEEDING_POTION)
+			);
+		});
+		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
+			builder.registerPotionRecipe(
+					Potions.WATER,
+					Items.BROWN_MUSHROOM,
+					Registries.POTION.getEntry(HALLUCINATION_POTION)
+			);
+		});
+		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
+			builder.registerPotionRecipe(
+					Potions.WATER,
+					Items.GOLDEN_APPLE,
+					Registries.POTION.getEntry(REBIRTH_POTION)
+			);
+		});
+		// Blocks
+		// Items.WHEAT_SEEDS
+		// CommandManager
+		// CommandContext
+		// LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+		// 	// Let's only modify built-in loot tables and leave data pack loot tables untouched by checking the source.
+		// 	// We also check that the loot table ID is equal to the ID we want.
+		// 	if (source.isBuiltin() && LootTables.equals(key)) {
+		// 		// We make the pool and add an item
+		// 		LootPool.Builder poolBuilder = LootPool.builder().with(ItemEntry.builder(Items.EGG));
+		// 		tableBuilder.pool(poolBuilder);
+		// 	}
+		// });
+	}
 
 }

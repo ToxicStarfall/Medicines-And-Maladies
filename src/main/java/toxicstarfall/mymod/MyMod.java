@@ -26,5 +26,6 @@ public class MyMod implements ModInitializer {
 		ModItems.initialize();
 		ModEffects.initialize();
 		ModEntities.initialize();
+
 	}
 }
