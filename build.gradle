@@ -68,6 +68,7 @@ jar {
     from("LICENSE") {
         rename { "${it}_${project.archivesBaseName}" }
     }
+    archiveFileName.set("my-custom-app.jar")
 }
 
 // configure the maven publication

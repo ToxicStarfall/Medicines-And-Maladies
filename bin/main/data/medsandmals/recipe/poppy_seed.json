@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+        "#",
+        "#"
+    ],
+	"key": {
+		"#": "minecraft:poppy"
+	},
+	"result": {
+		"id": "medsandmals:poppy_seed",
+		"count": 3
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"item.medsandmals.bandage": "Bandage",
+	"item.medsandmals.poppy_cracker": "Poppy Cracker",
+	"item.medsandmals.poppy_seed": "Poppy Seed",
+	"item.medsandmals.shroom": "Shroom",
+	"item.medsandmals.some_item": "Some Item",
+
+	"effect.medsandmals.bleeeding": "Bleeding",
+	"effect.medsandmals.growth": "Growth",
+	"effect.medsandmals.hallucination": "Hallucination",
+	"effect.medsandmals.rebirth": "Rebirth",
+	"effect.medsandmals.sedated": "Sedated",
+
+	"item.minecraft.potion.effect.bleeding": "Potion of Bleeding",
+	"item.minecraft.potion.effect.hallucination": "Potion of Hallucination",
+	"item.minecraft.potion.effect.rebirth": "Potion of Rebirth",
+
+	"item.minecraft.splash_potion.effect.bleeding": "Splash Potion of Bleeding",
+	"item.minecraft.splash_potion.effect.hallucination": "Splash Potion of Hallucination",
+	"item.minecraft.splash_potion.effect.rebirth": "Splash Potion of Rebirth",
+	
+	"item.minecraft.lingering_potion.effect.bleeding": "Lingering Potion of Bleeding",
+	"item.minecraft.lingering_potion.effect.hallucination": "Lingering Potion of Hallucination",
+	"item.minecraft.lingering_potion.effect.rebirth": "Lingering Potion of Rebirth",
+
+	"death.attack.bleeding": "%s bled to death",
+	"death.attack.bleeding.item": "%s was bled to death by %s using %s",
+	"death.attack.bleeding.player": "%s bled to death whilst trying to escape %s"
+}

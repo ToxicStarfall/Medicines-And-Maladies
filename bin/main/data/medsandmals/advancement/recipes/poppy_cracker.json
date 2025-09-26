@@ -1,0 +1,25 @@
+{
+	"criteria": {
+		"has_wheat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:wheat"
+					}
+				]
+			}
+		},
+		"has_poppy_seed_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "medsandmals:poppy_seed"
+			}
+		}
+	},
+	"rewards": {
+		"recipes": [
+			"medsandmals:poppy_cracker"
+		]
+	}
+}

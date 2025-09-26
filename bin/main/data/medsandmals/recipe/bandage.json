@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "SSS",
+        "SSS"
+    ],
+    "key": {
+        "S": "minecraft:string"
+    },
+    "result": {
+        "id": "medsandmals:bandage",
+        "count": 1
+    }
+}

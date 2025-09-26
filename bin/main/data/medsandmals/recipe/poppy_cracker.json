@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# #",
+        "WWW"
+    ],
+    "key": {
+        "#": "medsandmals:poppy_seed",
+        "W": "minecraft:wheat"
+    },
+    "result": {
+        "id": "medsandmals:poppy_cracker",
+        "count": 1
+    }
+}

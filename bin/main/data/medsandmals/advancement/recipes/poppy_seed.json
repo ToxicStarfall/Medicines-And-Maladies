@@ -1,0 +1,19 @@
+{
+	"criteria": {
+		"has_poppy": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:poppy"
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"recipes": [
+			"medsandmals:poppy_seed"
+		]
+	}
+}

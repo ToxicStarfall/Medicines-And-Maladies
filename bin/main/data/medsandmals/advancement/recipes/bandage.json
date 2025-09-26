@@ -1,0 +1,19 @@
+{
+	"criteria": {
+		"has_string": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:string"
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"recipes": [
+			"medsandmals:bandage"
+		]
+	}
+}
