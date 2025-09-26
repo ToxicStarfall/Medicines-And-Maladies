@@ -1,6 +1,6 @@
 package toxicstarfall.mymod.effect;
 
 
-public class HighEffect {
+public class CurseOfVengeance {
 	
 }

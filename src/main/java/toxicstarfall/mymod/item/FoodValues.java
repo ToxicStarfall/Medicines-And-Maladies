@@ -39,7 +39,7 @@ public class FoodValues {
 
 		// Specific Consumables Effects
 		public static final ConsumableComponent BANDAGE = ConsumableComponents.food()
-			.consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 0, 2), 1.0f))
+			.consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 1, -1), 1.0f))
 			.consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 10 * 20, 1), 0.1f))
 			.build();
 		public static final ConsumableComponent POPPY_SEED = ConsumableComponents.food()

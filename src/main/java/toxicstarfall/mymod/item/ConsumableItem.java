@@ -4,8 +4,6 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 
-import toxicstarfall.mymod.MyMod;
-
 
 public class ConsumableItem extends Item {
 
@@ -15,5 +13,7 @@ public class ConsumableItem extends Item {
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
 			.register((itemGroup) -> itemGroup.add(this));
 	}
+
+
 
 }
