@@ -1,7 +1,7 @@
 # Medicines & Maladies
 **Download** - 
 [Modrinth](https://modrinth.com/mod/medicines-and-maladies) -
-[Releases](https://github.com/ToxicStarfall/Medicines-And-Maladies/Releases)  
+[Releases](https://github.com/ToxicStarfall/Medicines-And-Maladies/releases)  
 **Wiki** -
 [Items](https://github.com/ToxicStarfall/Medicines-And-Maladies/wiki/Items) - 
 [Status Effects](https://github.com/ToxicStarfall/Medicines-And-Maladies/wiki/Status-Effects)
